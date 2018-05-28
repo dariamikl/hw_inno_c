@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/task.c" "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_task.dir/__/src/task.c.o"
-  "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_task.c" "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_task.dir/test_task.c.o"
+  "/home/romerion/hw_inno_c/template/src/task.c" "/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_task.dir/__/src/task.c.o"
+  "/home/romerion/hw_inno_c/template/tests/test_task.c" "/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_task.dir/test_task.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -12,21 +12,23 @@ stdio.h
 stdlib.h
 ../tests/../src/stdlib.h
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/task.c
+/home/romerion/hw_inno_c/template/src/task.c
 stdbool.h
 -
 task.h
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/task.h
+/home/romerion/hw_inno_c/template/src/task.h
+limits.h
+-
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/task.h
+/home/romerion/hw_inno_c/template/src/task.h
 stdio.h
 -
 stdlib.h
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/stdlib.h
+/home/romerion/hw_inno_c/template/src/stdlib.h
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_task.c
+/home/romerion/hw_inno_c/template/tests/test_task.c
 check.h
 -
 task.h
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/task.h
+/home/romerion/hw_inno_c/template/tests/task.h
 

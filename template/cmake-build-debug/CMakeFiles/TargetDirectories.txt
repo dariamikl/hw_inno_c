@@ -1,8 +1,8 @@
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles/test.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_task.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles/test.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_task.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test.dir

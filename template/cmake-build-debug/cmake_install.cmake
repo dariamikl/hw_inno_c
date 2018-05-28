@@ -1,4 +1,4 @@
-# Install script for directory: /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template
+# Install script for directory: /home/romerion/hw_inno_c/template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/cmake_install.cmake")
+  include("/home/romerion/hw_inno_c/template/cmake-build-debug/tests/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/romerion/hw_inno_c/template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

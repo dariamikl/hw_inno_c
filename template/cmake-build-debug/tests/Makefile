@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /snap/clion/22/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake -E remove -f
+RM = /snap/clion/22/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template
+CMAKE_SOURCE_DIR = /home/romerion/hw_inno_c/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/romerion/hw_inno_c/template/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alien/Загрузки/inno_ansic_spring-dev/assignment
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/22/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/22/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -81,7 +81,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/alien/Документы/clion-2018.1.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+	/snap/clion/22/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -91,14 +91,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/progress.marks
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles 0
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles /home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/progress.marks
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,22 +108,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/test_binarize.dir/rule:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_binarize.dir/rule
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_binarize.dir/rule
 .PHONY : tests/CMakeFiles/test_binarize.dir/rule
 
 # Convenience name for target.
@@ -133,12 +133,12 @@ test_binarize: tests/CMakeFiles/test_binarize.dir/rule
 
 # fast build rule for target.
 test_binarize/fast:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/build
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/build
 .PHONY : test_binarize/fast
 
 # Convenience name for target.
 tests/CMakeFiles/test_task.dir/rule:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_task.dir/rule
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_task.dir/rule
 .PHONY : tests/CMakeFiles/test_task.dir/rule
 
 # Convenience name for target.
@@ -148,7 +148,7 @@ test_task: tests/CMakeFiles/test_task.dir/rule
 
 # fast build rule for target.
 test_task/fast:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/build
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/build
 .PHONY : test_task/fast
 
 __/src/binarize.o: __/src/binarize.c.o
@@ -157,7 +157,7 @@ __/src/binarize.o: __/src/binarize.c.o
 
 # target to build an object file
 __/src/binarize.c.o:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o
 .PHONY : __/src/binarize.c.o
 
 __/src/binarize.i: __/src/binarize.c.i
@@ -166,7 +166,7 @@ __/src/binarize.i: __/src/binarize.c.i
 
 # target to preprocess a source file
 __/src/binarize.c.i:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.i
 .PHONY : __/src/binarize.c.i
 
 __/src/binarize.s: __/src/binarize.c.s
@@ -175,7 +175,7 @@ __/src/binarize.s: __/src/binarize.c.s
 
 # target to generate assembly for a file
 __/src/binarize.c.s:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.s
 .PHONY : __/src/binarize.c.s
 
 __/src/task.o: __/src/task.c.o
@@ -184,7 +184,7 @@ __/src/task.o: __/src/task.c.o
 
 # target to build an object file
 __/src/task.c.o:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.o
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.o
 .PHONY : __/src/task.c.o
 
 __/src/task.i: __/src/task.c.i
@@ -193,7 +193,7 @@ __/src/task.i: __/src/task.c.i
 
 # target to preprocess a source file
 __/src/task.c.i:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.i
 .PHONY : __/src/task.c.i
 
 __/src/task.s: __/src/task.c.s
@@ -202,7 +202,7 @@ __/src/task.s: __/src/task.c.s
 
 # target to generate assembly for a file
 __/src/task.c.s:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/__/src/task.c.s
 .PHONY : __/src/task.c.s
 
 test_binarize.o: test_binarize.c.o
@@ -211,7 +211,7 @@ test_binarize.o: test_binarize.c.o
 
 # target to build an object file
 test_binarize.c.o:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.o
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.o
 .PHONY : test_binarize.c.o
 
 test_binarize.i: test_binarize.c.i
@@ -220,7 +220,7 @@ test_binarize.i: test_binarize.c.i
 
 # target to preprocess a source file
 test_binarize.c.i:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.i
 .PHONY : test_binarize.c.i
 
 test_binarize.s: test_binarize.c.s
@@ -229,7 +229,7 @@ test_binarize.s: test_binarize.c.s
 
 # target to generate assembly for a file
 test_binarize.c.s:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_binarize.dir/build.make tests/CMakeFiles/test_binarize.dir/test_binarize.c.s
 .PHONY : test_binarize.c.s
 
 test_task.o: test_task.c.o
@@ -238,7 +238,7 @@ test_task.o: test_task.c.o
 
 # target to build an object file
 test_task.c.o:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.o
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.o
 .PHONY : test_task.c.o
 
 test_task.i: test_task.c.i
@@ -247,7 +247,7 @@ test_task.i: test_task.c.i
 
 # target to preprocess a source file
 test_task.c.i:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.i
 .PHONY : test_task.c.i
 
 test_task.s: test_task.c.s
@@ -256,7 +256,7 @@ test_task.s: test_task.c.s
 
 # target to generate assembly for a file
 test_task.c.s:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/test_task.dir/build.make tests/CMakeFiles/test_task.dir/test_task.c.s
 .PHONY : test_task.c.s
 
 # Help Target
@@ -293,6 +293,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

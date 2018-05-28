@@ -6,5 +6,5 @@ C_FLAGS =  -std=c99 -Wall -Wextra -Wshadow -g -O0 -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/. -I/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/../src 
+C_INCLUDES = -I/home/romerion/hw_inno_c/template/tests/. -I/home/romerion/hw_inno_c/template/tests/../src 
 

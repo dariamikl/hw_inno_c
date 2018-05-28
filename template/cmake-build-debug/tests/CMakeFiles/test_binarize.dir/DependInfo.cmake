@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.c" "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o"
-  "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_binarize.c" "/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/test_binarize.c.o"
+  "/home/romerion/hw_inno_c/template/src/binarize.c" "/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o"
+  "/home/romerion/hw_inno_c/template/tests/test_binarize.c" "/home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/test_binarize.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

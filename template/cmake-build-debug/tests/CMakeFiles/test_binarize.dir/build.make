@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /snap/clion/22/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake -E remove -f
+RM = /snap/clion/22/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template
+CMAKE_SOURCE_DIR = /home/romerion/hw_inno_c/template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug
+CMAKE_BINARY_DIR = /home/romerion/hw_inno_c/template/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/test_binarize.dir/depend.make
@@ -59,16 +59,16 @@ include tests/CMakeFiles/test_binarize.dir/flags.make
 
 tests/CMakeFiles/test_binarize.dir/test_binarize.c.o: tests/CMakeFiles/test_binarize.dir/flags.make
 tests/CMakeFiles/test_binarize.dir/test_binarize.c.o: ../tests/test_binarize.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test_binarize.dir/test_binarize.c.o"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_binarize.dir/test_binarize.c.o   -c /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_binarize.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object tests/CMakeFiles/test_binarize.dir/test_binarize.c.o"
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_binarize.dir/test_binarize.c.o   -c /home/romerion/hw_inno_c/template/tests/test_binarize.c
 
 tests/CMakeFiles/test_binarize.dir/test_binarize.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_binarize.dir/test_binarize.c.i"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_binarize.c > CMakeFiles/test_binarize.dir/test_binarize.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/romerion/hw_inno_c/template/tests/test_binarize.c > CMakeFiles/test_binarize.dir/test_binarize.c.i
 
 tests/CMakeFiles/test_binarize.dir/test_binarize.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_binarize.dir/test_binarize.c.s"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_binarize.c -o CMakeFiles/test_binarize.dir/test_binarize.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/romerion/hw_inno_c/template/tests/test_binarize.c -o CMakeFiles/test_binarize.dir/test_binarize.c.s
 
 tests/CMakeFiles/test_binarize.dir/test_binarize.c.o.requires:
 
@@ -83,16 +83,16 @@ tests/CMakeFiles/test_binarize.dir/test_binarize.c.o.provides.build: tests/CMake
 
 tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o: tests/CMakeFiles/test_binarize.dir/flags.make
 tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o: ../src/binarize.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_binarize.dir/__/src/binarize.c.o   -c /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o"
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_binarize.dir/__/src/binarize.c.o   -c /home/romerion/hw_inno_c/template/src/binarize.c
 
 tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_binarize.dir/__/src/binarize.c.i"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.c > CMakeFiles/test_binarize.dir/__/src/binarize.c.i
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/romerion/hw_inno_c/template/src/binarize.c > CMakeFiles/test_binarize.dir/__/src/binarize.c.i
 
 tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_binarize.dir/__/src/binarize.c.s"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.c -o CMakeFiles/test_binarize.dir/__/src/binarize.c.s
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/romerion/hw_inno_c/template/src/binarize.c -o CMakeFiles/test_binarize.dir/__/src/binarize.c.s
 
 tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o.requires:
 
@@ -117,8 +117,8 @@ tests/test_binarize: tests/CMakeFiles/test_binarize.dir/test_binarize.c.o
 tests/test_binarize: tests/CMakeFiles/test_binarize.dir/__/src/binarize.c.o
 tests/test_binarize: tests/CMakeFiles/test_binarize.dir/build.make
 tests/test_binarize: tests/CMakeFiles/test_binarize.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable test_binarize"
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_binarize.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/romerion/hw_inno_c/template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable test_binarize"
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_binarize.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/test_binarize.dir/build: tests/test_binarize
@@ -131,10 +131,10 @@ tests/CMakeFiles/test_binarize.dir/requires: tests/CMakeFiles/test_binarize.dir/
 .PHONY : tests/CMakeFiles/test_binarize.dir/requires
 
 tests/CMakeFiles/test_binarize.dir/clean:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_binarize.dir/cmake_clean.cmake
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_binarize.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/test_binarize.dir/clean
 
 tests/CMakeFiles/test_binarize.dir/depend:
-	cd /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/romerion/hw_inno_c/template/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/romerion/hw_inno_c/template /home/romerion/hw_inno_c/template/tests /home/romerion/hw_inno_c/template/cmake-build-debug /home/romerion/hw_inno_c/template/cmake-build-debug/tests /home/romerion/hw_inno_c/template/cmake-build-debug/tests/CMakeFiles/test_binarize.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/test_binarize.dir/depend
 
