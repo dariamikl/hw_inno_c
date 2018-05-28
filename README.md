@@ -1,7 +1,7 @@
 # hw_inno_c
-Team:
-Alexey Zhuchkov
-Aliya Zagidullina
-Daria Miklashevskaya
-Rim Rakhimov
-Susanna Gimaeva
+  __Team:__ <br />
+Alexey Zhuchkov <br />
+Aliya Zagidullina <br />
+Daria Miklashevskaya <br />
+Rim Rakhimov <br />
+Susanna Gimaeva <br />
