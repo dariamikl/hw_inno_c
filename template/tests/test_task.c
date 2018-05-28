@@ -380,7 +380,35 @@ END_TEST
 
 START_TEST (test_any)
 {
+	
+        const char s1[] = "123456789";
+        const char s2[] = "0000000";
 
+        int output = any(s1, s2);
+
+        ck_assert_int_eq(output,-1);
+
+
+        const char s3[] = "0121212";
+        const char s4[] = "123456789";
+
+        int output1 = any(s3, s4);
+
+        ck_assert_int_eq(output1,1);
+
+        const char s5[] = " ";
+        const char s6[] = " ";
+
+        int output2 = any(s5, s6);
+
+        ck_assert_int_eq(output2,0);
+
+        const char s7[] = "";
+        const char s8[] = "";
+
+        int output3 = any(s7, s8);
+
+        ck_assert_int_eq(output3,-1);
 }
 END_TEST
 
@@ -663,7 +691,47 @@ END_TEST
 
 START_TEST (test_itob)
 {
+	const char input[] = "4";
 
+        char *output = itob(4,input,2);
+
+        ck_assert_str_eq("100",output);
+
+        const char input1[] = "0";
+
+        char *output1 = itob(0,input1,2);
+
+        ck_assert_str_eq("0",output1);
+
+        const char input2[] = "15";
+
+        char *output2 = itob(15,input2,16);
+
+        ck_assert_str_eq("F",output2);
+
+        const char input3[] = "25";
+
+        char *output3 = itob(25,input3,8);
+
+        ck_assert_str_eq("31",output3);
+
+        const char input4[] = "-25";
+
+        char *output4 = itob(-25,input4,8);
+
+        ck_assert_str_eq("-31",output4);
+
+        const char input5[] = "35";
+
+        char *output5 = itob(35,input5,36);
+
+        ck_assert_str_eq("Z",output5);
+
+        const char input6[] = "36";
+
+        char *output6 = itob(36,input6,37);
+
+        ck_assert_str_eq("",output6);
 }
 END_TEST
 
