@@ -1,0 +1,5 @@
+/home/alien/Документы/clion-2018.1.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template
+-- Checking for one of the modules 'check'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/cmake-build-debug
