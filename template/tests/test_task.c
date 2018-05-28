@@ -303,7 +303,6 @@ START_TEST (test_flush)
         char *output2 = flush(input2);
 
         ck_assert_str_eq(pattern2, output2);
-    }
 }
 END_TEST
 
