@@ -19,6 +19,37 @@
 	} while(0)
 #endif
 
+START_TEST (test_htoi)
+    {
+
+        ck_assert(htoi("10") == 16);
+        ck_assert(htoi("11") == 17);
+        ck_assert(htoi("0") == 0);
+        ck_assert(htoi("a") == 10);
+        ck_assert(htoi("a0") == 160);
+        ck_assert(htoi("FFF") == 4095);
+        ck_assert(htoi("7fff") == 32767);
+        ck_assert(htoi("8000") == 32768);
+        ck_assert(htoi("8001") == 32769);
+        ck_assert(htoi("0x8001") == 32769);
+    }
+END_TEST
+
+
+START_TEST (test_escape)
+    {
+        ck_assert_str_eq(escape("im_a_princess_of_C\n"), "im_a_princess_of_C\\n");
+        ck_assert_str_eq(escape(""), "");
+        ck_assert_str_eq(escape("\n"), "\\n");
+        ck_assert_str_eq(escape("\\"), "\\");
+        ck_assert_str_eq(escape("\nescape"), "\\nescape");
+        ck_assert_str_eq(escape("\n\t\\"), "\\n\\t\\");
+        ck_assert_str_eq(escape("\a\b\v\t\\\\"), "\\a\\b\\v\\t\\\\");
+
+    }
+END_TEST
+
+
 START_TEST (test_stub)
 {
 	ck_assert(42 == stub());

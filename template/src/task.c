@@ -78,6 +78,77 @@ char* detab(const char input[])
 	return c;
 }
 
+int htoi(const char s[]) {
+    int i = 0, n;
+    n = 0;
+    if (s[0] == '0')
+        if (s[1] == 'x' || s[1] == 'X')
+            i = 2;
+    for (i; (s[i] >= '0' && s[i] <= '9') || (s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'); i++)
+        if (s[i] >= '0' && s[i] <= '9')
+            n = 16 * n + (s[i] - '0');
+        else if (s[i] >= 'a' && s[i] <= 'f')
+            n = 16 * n + (s[i] - 'a' + 10);
+        else if (s[i] >= 'A' && s[i] <= 'F')
+            n = 16 * n + (s[i] - 'A' + 10);
+    return n;
+}
+
+
+char *escape(const char from[]) {
+    int n = 0;
+    int i = 0;
+    int j = 0;
+    char c;
+    while ((c = from[n]) != '\0') n++;
+
+    char *to = malloc((2 * n) * sizeof(char));
+    while ((c = from[i]) != '\0') {
+        switch (c) {
+            case '\n':
+                to[j++] = '\\';
+                to[j++] = 'n';
+                break;
+            case '\t':
+                to[j++] = '\\';
+                to[j++] = 't';
+                break;
+            case '\a':
+                to[j++] = '\\';
+                to[j++] = 'a';
+                break;
+            case '\b':
+                to[j++] = '\\';
+                to[j++] = 'b';
+                break;
+            case '\v':
+                to[j++] = '\\';
+                to[j++] = 'v';
+                break;
+            case '\f':
+                to[j++] = '\\';
+                to[j++] = 'f';
+                break;
+            case '\r':
+                to[j++] = '\\';
+                to[j++] = 'r';
+                break;
+            case '\'':
+                to[j++] = '\\';
+                to[j++] = '\\';
+                break;
+            default:
+                to[j++] = from[i];
+                break;
+        }
+
+        i++;
+    }
+    to[j] = '\0';
+    return
+            to;
+
+
 char* entab(const char input[])
 {
 	int size = 0;
