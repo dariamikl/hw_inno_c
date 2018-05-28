@@ -747,45 +747,32 @@ END_TEST
 
 START_TEST (test_itob)
 {
-	const char input[] = "4";
 
-        char *output = itob(4,input,2);
+        char *output = itob(4,2);
 
-        ck_assert_str_eq("100",output);
+        ck_assert_str_eq("100",output);     
 
-        const char input1[] = "0";
-
-        char *output1 = itob(0,input1,2);
+        char *output1 = itob(0,2);
 
         ck_assert_str_eq("0",output1);
 
-        const char input2[] = "15";
-
-        char *output2 = itob(15,input2,16);
+        char *output2 = itob(15,16);
 
         ck_assert_str_eq("F",output2);
 
-        const char input3[] = "25";
-
-        char *output3 = itob(25,input3,8);
+        char *output3 = itob(25,8);
 
         ck_assert_str_eq("31",output3);
 
-        const char input4[] = "-25";
-
-        char *output4 = itob(-25,input4,8);
+        char *output4 = itob(-25,8);
 
         ck_assert_str_eq("-31",output4);
 
-        const char input5[] = "35";
-
-        char *output5 = itob(35,input5,36);
+        char *output5 = itob(35,36);
 
         ck_assert_str_eq("Z",output5);
 
-        const char input6[] = "36";
-
-        char *output6 = itob(36,input6,37);
+        char *output6 = itob(36,37);
 
         ck_assert_str_eq("",output6);
 }
