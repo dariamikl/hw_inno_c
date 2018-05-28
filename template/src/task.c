@@ -368,13 +368,17 @@ int any(const char s1[], const char s2[]) {
     return -1;
 }
 
-char *itob(int n, const char s[], int b) {
+char *itob(int n, int b) {
     int quotient, remainder, i, j, size;
     char tmp;
 
     size = 0;
-    STRING_LEN(size, s);
-    char *arr = ALLOCATE((int) ((size * 3.32) + 1));
+    quotient = n;
+    while (quotient != 0) {
+        size++;
+        quotient = quotient / b;
+    }
+    char *arr = ALLOCATE(size + 1);
 
     //restriction on bases is 36
     //function can convert integers into bases no more that 36
