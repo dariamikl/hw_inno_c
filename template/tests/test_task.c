@@ -247,7 +247,63 @@ END_TEST
 
 START_TEST (test_flush)
 {
+	const char input[] ="// This will disappear \n";
+        const char pattern[] ="\n";
 
+        char *output = flush(input);
+
+        ck_assert_str_eq(pattern, output);
+
+        const char input1[] ="\t char *array_changer(const char c[]) {\n"
+                            "\tconst char input[] = \"//This will stay\";\n"
+                            "\ttransparent[] = \"/*This also will stay*/\";\n"
+                            "\tconstants[] = \"/*And this\"; //It should disappear\n"
+                            "\tconst char pattern[] = \"And this one*/\";\n";
+
+        const char pattern1[] ="\t char *array_changer(const char c[]) {\n"
+                              "\tconst char input[] = \"//This will stay\";\n"
+                              "\ttransparent[] = \"/*This also will stay*/\";\n"
+                              "\tconstants[] = \"/*And this\"; \n"
+                              "\tconst char pattern[] = \"And this one*/\";\n";
+
+        char *output1 = flush(input1);
+
+        ck_assert_str_eq(pattern1, output1);
+
+        const char input2[] = "    char j = 0;\n"
+                            "    int size = 0;\n"
+                            "    STRING_LEN(size, c);\n"
+                            "    char *b = ALLOCATE(size);\n"
+                            "\n"
+                            "    for (; j < size;) {\n"
+                            "        if (c[j] == 'c')  //It's invisible\n"
+                            "            b[j] = 'b';\n"
+                            "        else\n"
+                            "            b[j] = c[j];\n"
+                            "        j++;\n"
+                            "    }\n"
+                            "    return b;\n"
+                            "}";
+
+        const char pattern2[] = "    char j = 0;\n"
+                              "    int size = 0;\n"
+                              "    STRING_LEN(size, c);\n"
+                              "    char *b = ALLOCATE(size);\n"
+                              "\n"
+                              "    for (; j < size;) {\n"
+                              "        if (c[j] == 'c')  \n"
+                              "            b[j] = 'b';\n"
+                              "        else\n"
+                              "            b[j] = c[j];\n"
+                              "        j++;\n"
+                              "    }\n"
+                              "    return b;\n"
+                              "}";
+
+        char *output2 = flush(input2);
+
+        ck_assert_str_eq(pattern2, output2);
+    }
 }
 END_TEST
 
