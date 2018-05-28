@@ -337,12 +337,6 @@ START_TEST (test_flush)
 }
 END_TEST
 
-START_TEST (test_htoi)
-{
-
-}
-END_TEST
-
 START_TEST (test_squeeze)
 {
 	const char input1_1[] = "abcbwa";
@@ -609,12 +603,6 @@ START_TEST (test_binsearch)
 	/** check statement is true */
 
 	ck_assert(pattern_9 == output_9);
-}
-END_TEST
-
-START_TEST (test_escape)
-{
-
 }
 END_TEST
 

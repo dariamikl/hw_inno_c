@@ -147,15 +147,14 @@ char *escape(const char from[]) {
     to[j] = '\0';
     return
             to;
+}
 
+char *entab(const char input[]) {
+    int size = 0;
+    STRING_LEN(size, input);
+    char *c = ALLOCATE(size + 1);
 
-char* entab(const char input[])
-{
-	int size = 0;
-	STRING_LEN(size, input);
-    char* c = ALLOCATE(size+1);
-
-    int i,k;
+    int i, k;
     for (i = 0, k = 0; i < size; i++, k++) {
         if (i < (size - 3) && input[i] == ' ' && input[i + 1] == ' ' && input[i + 2] == ' ' &&
             input[i + 3] == ' ') {
@@ -164,51 +163,54 @@ char* entab(const char input[])
         } else c[k] = input[i];
     }
 
-    c[k]='\0';
-	return c;
+    c[k] = '\0';
+    return c;
 }
 
-char* expand(const char s1[]){
+char *expand(const char s1[]) {
 
-    int size = 0,new_size=0;
+    int size = 0, new_size = 0;
     STRING_LEN(size, s1);
 
-    for(int i=0;i<size;i++){
-        if (s1[i+1] == '-' && s1[i+2] != '\0' && s1[i] <= s1[i+2] &&
-            ( ('a' <= s1[i] && s1[i] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
-              ('0' <= s1[i] && s1[i] <= '9') ) && (('a' <= s1[i+2] && s1[i+2] <= 'z') || ('A' <= s1[i+2] && s1[i+2] <= 'Z') ||
-                                                   ('0' <= s1[i+2] && s1[i+2] <= '9'))) {
-            new_size+=s1[i+2] - s1[i]+1;
+    for (int i = 0; i < size; i++) {
+        if (s1[i + 1] == '-' && s1[i + 2] != '\0' && s1[i] <= s1[i + 2] &&
+            (('a' <= s1[i] && s1[i] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
+             ('0' <= s1[i] && s1[i] <= '9')) &&
+            (('a' <= s1[i + 2] && s1[i + 2] <= 'z') || ('A' <= s1[i + 2] && s1[i + 2] <= 'Z') ||
+             ('0' <= s1[i + 2] && s1[i + 2] <= '9'))) {
+            new_size += s1[i + 2] - s1[i] + 1;
             i += 1;
-        } else{
+        } else {
             new_size++;
         }
     }
 
-    char* c = ALLOCATE(new_size+1);
+    char *c = ALLOCATE(new_size + 1);
 
-    int j=0,last_used=0;
+    int j = 0, last_used = 0;
     for (int i = 0; s1[i] != '\0'; ++i) {
-        if (s1[i+1] == '-' && s1[i+2] != '\0' && s1[i] <= s1[i+2] &&
-                ( ('a' <= s1[i] && s1[i] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
-                ('0' <= s1[i] && s1[i] <= '9') ) && (('a' <= s1[i+2] && s1[i+2] <= 'z') || ('A' <= s1[i+2] && s1[i+2] <= 'Z') ||
-                                                     ('0' <= s1[i+2] && s1[i+2] <= '9'))){
+        if (s1[i + 1] == '-' && s1[i + 2] != '\0' && s1[i] <= s1[i + 2] &&
+            (('a' <= s1[i] && s1[i] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
+             ('0' <= s1[i] && s1[i] <= '9')) &&
+            (('a' <= s1[i + 2] && s1[i + 2] <= 'z') || ('A' <= s1[i + 2] && s1[i + 2] <= 'Z') ||
+             ('0' <= s1[i + 2] && s1[i + 2] <= '9'))) {
             int k = 0;
-            if(last_used)
+            if (last_used)
                 k++;
-            while (k <= s1[i+2] - s1[i])
+            while (k <= s1[i + 2] - s1[i])
                 c[j++] = (char) (s1[i] + k++);
-            if((s1[i+3] != '\0' && s1[i+3]=='-') && (s1[i+4] != '\0' ) && s1[i+2] <= s1[i+4] &&
-                    ( ('a' <= s1[i+2] && s1[i+2] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
-                      ('0' <= s1[i+2] && s1[i+2] <= '9') ) && (('a' <= s1[i+4] && s1[i+4] <= 'z') || ('A' <= s1[i+4] && s1[i+4] <= 'Z') ||
-                                                           ('0' <= s1[i+4] && s1[i+4] <= '9'))){
-                    i++;
-                    last_used=1;
-            }else{
-                i+=2;
-                last_used=0;
+            if ((s1[i + 3] != '\0' && s1[i + 3] == '-') && (s1[i + 4] != '\0') && s1[i + 2] <= s1[i + 4] &&
+                (('a' <= s1[i + 2] && s1[i + 2] <= 'z') || ('A' <= s1[i] && s1[i] <= 'Z') ||
+                 ('0' <= s1[i + 2] && s1[i + 2] <= '9')) &&
+                (('a' <= s1[i + 4] && s1[i + 4] <= 'z') || ('A' <= s1[i + 4] && s1[i + 4] <= 'Z') ||
+                 ('0' <= s1[i + 4] && s1[i + 4] <= '9'))) {
+                i++;
+                last_used = 1;
+            } else {
+                i += 2;
+                last_used = 0;
             }
-        }else {
+        } else {
             c[j++] = s1[i];
         }
     }
@@ -244,13 +246,12 @@ int strrindex(const char s[], const char t[]) {
     return last;
 }
 
-char* enter(int n, const char input[])
-{
+char *enter(int n, const char input[]) {
     int size = 0;
     STRING_LEN(size, input);
 
     int newlines = size / n;
-    char* res = ALLOCATE(size+newlines);
+    char *res = ALLOCATE(size + newlines);
 
     int count = 0;
     int pos = 0;
@@ -258,8 +259,7 @@ char* enter(int n, const char input[])
         if (input[i] == '\n') {
             count = 0;
             res[pos++] = input[i++];
-        }
-        else if (count == n) {
+        } else if (count == n) {
             count = 0;
             res[pos++] = '\n';
         }
@@ -270,11 +270,10 @@ char* enter(int n, const char input[])
     return res;
 }
 
-char* squeeze(const char s1[], const char s2[])
-{
+char *squeeze(const char s1[], const char s2[]) {
     int size1 = 0;
     STRING_LEN(size1, s1);
-    char* res = ALLOCATE(size1);
+    char *res = ALLOCATE(size1);
 
     int size2 = 0;
     STRING_LEN(size2, s2);
@@ -296,8 +295,7 @@ char* squeeze(const char s1[], const char s2[])
     return res;
 }
 
-int binsearch(int x, int v[], int n)
-{
+int binsearch(int x, int v[], int n) {
     int low, high, mid;
 
     low = 0;
@@ -314,8 +312,7 @@ int binsearch(int x, int v[], int n)
     return -1;
 }
 
-int reqmem(int n)
-{
+int reqmem(int n) {
     int size = 0;
     if (n <= 0)
         ++size;
@@ -326,11 +323,10 @@ int reqmem(int n)
     return size;
 }
 
-char* itoa(int n)
-{
+char *itoa(int n) {
     int pos, sign, isminint = 0;
     int size = reqmem(n) + 1;
-    char* s = ALLOCATE(size);
+    char *s = ALLOCATE(size);
 
     if (n == INT_MIN) {
         n = n + 1;
@@ -494,7 +490,6 @@ char *itob(int n, int b) {
         }
         return arr;
     }
-
 }
 
 /** GET FROM task.h */
