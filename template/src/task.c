@@ -291,4 +291,135 @@ char* itoa(int n)
     return s;
 }
 
+#define true 1
+#define false 0
+
+char *flush(const char input[]) {
+    //size of input string
+    int size = 0;
+    int i = 0;
+    int j = 0;
+    // it's 0 if loop is in quotes, otherwise - 1
+    int closed = true;
+
+    STRING_LEN(size, input);
+    char *b = ALLOCATE(size);
+
+    for (; i < size;) {
+        // if we reached end of string
+        if (input[i] == '\0') {
+            b[j] = input[i];
+            break;
+            // if we entered in the quotes
+        } else if (input[i] == '\"') {
+
+            // reverse it when enter/exit quotes
+            if (closed == true) {
+                closed = false;
+            } else {
+                closed = true;
+            }
+
+            b[j++] = input[i++];
+            //if we reached // comment
+        } else if (input[i] == '/' && input[i + 1] == '/' && closed == true) {
+            i += 2;
+            // skip all char until end of line
+            while (input[i] != '\n' && input[i] != '\0') {
+                ++i;
+            }
+            // if we reach /** comment
+        } else if (input[i] == '/' && input[i + 1] == '*' && closed == true) {
+            i += 2;
+            // skip all chars until end of comment */
+            while ((input[i] != '*' || input[i + 1] != '/') && input[i] != '\0') {
+                ++i;
+            }
+            //delete */ chars at the end of comment
+            if (input[i] == '*') {
+                i += 2;
+            }
+        } else {
+            b[j++] = input[i++];
+        }
+    }
+
+    return b;
+}
+
+int any(const char s1[], const char s2[]) {
+    int i = 0;
+    int j;
+
+    //check every char in s2
+    while (s2[i] != '\0') {
+        j = 0;
+        //iterate through the s1 in order to find s2[i]
+        while (s1[j] != '\0') {
+            //checks equality of symbols
+            if (s2[i] == s1[j]) {
+                return j;
+            }
+            j++;
+        }
+        i++;
+    }
+    // if there is no match
+    return -1;
+}
+
+char *itob(int n, const char s[], int b) {
+    int quotient, remainder, i, j, size;
+    char tmp;
+
+    size = 0;
+    STRING_LEN(size, s);
+    char *arr = ALLOCATE((int) ((size * 3.32) + 1));
+
+    //restriction on bases is 36
+    //function can convert integers into bases no more that 36
+    char base[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (b < 2 || b > 36) {
+
+        return "";
+
+    } else if (n == 0) {
+        return "0";
+    } else {
+
+        quotient = n;
+
+        if (n < 0) {
+            quotient = 0 - quotient;
+        }
+
+        i = 0;
+
+        while (quotient != 0) {
+            remainder = quotient % b;
+            arr[i++] = base[remainder];
+            quotient = quotient / b;
+        }
+
+        if (n < 0) {
+            arr[i++] = '-';
+        }
+
+        arr[i--] = '\0';
+
+        j = 0;
+
+        while (j < i) {
+            tmp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = tmp;
+            ++j;
+            --i;
+        }
+        return arr;
+    }
+
+}
+
 /** GET FROM task.h */
