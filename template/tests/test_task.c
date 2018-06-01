@@ -7,16 +7,18 @@
 
 #ifndef COMPARATOR
 #define COMPARATOR(res, c1, c2) do                    \
-	{                                             \
-		char i = 0;                           \
-		for (;'\0' != (c1)[i];i++)            \
-		{                                     \
-			if((c1)[i] != (c2)[i])        \
-				{                     \
-                                        (res) = 0;    \
-				}                     \
-		}                                     \
-	} while(0)
+  {                                             \
+    int i = 0;                           \
+                (res) = 1;                              \
+    for (;'\0' != (c1)[i];i++)            \
+    {                                     \
+      if((c1)[i] != (c2)[i])        \
+        {                     \
+                                        (res) = 0;        \
+                                        break;    \
+        }                     \
+    }                                     \
+  } while(0)
 #endif
 
 START_TEST (test_htoi)

@@ -12,19 +12,19 @@ limits.h
 stdio.h
 -
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.c
+/home/romerion/hw_inno_c/template/src/binarize.c
 binarize.h
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.h
+/home/romerion/hw_inno_c/template/src/binarize.h
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/src/binarize.h
+/home/romerion/hw_inno_c/template/src/binarize.h
 limits.h
 -
 stdio.h
 -
 
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/test_binarize.c
+/home/romerion/hw_inno_c/template/tests/test_binarize.c
 check.h
 -
 binarize.h
-/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-1/template/tests/binarize.h
+/home/romerion/hw_inno_c/template/tests/binarize.h
 
