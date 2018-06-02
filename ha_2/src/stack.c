@@ -38,6 +38,7 @@ int push(double value)
 		return 0;
 	}
 	else if (count == MAX_SIZE) {
+		printf("%s\n", "The stack is full.");
 		return 1;
 	}
 	else {
