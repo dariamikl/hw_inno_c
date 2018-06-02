@@ -12,6 +12,16 @@ START_TEST (test_insert)
         for (int i = 0; i < 100; i++) {
             ck_assert_double_eq(extract_min(), i * 0.1);
         }
+
+        for (int i = 100; i > 0; i--) {
+            ck_assert_int_eq(insert(i * 0.1, i), 0);
+        }
+
+        ck_assert_int_eq(insert(101.0, 1), 1);
+
+        for (int i = 1; i <= 100; i++) {
+            ck_assert_double_eq(extract_min(), i * 0.1);
+        }
     }
 END_TEST
 

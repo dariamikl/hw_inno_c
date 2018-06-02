@@ -7,16 +7,16 @@
 START_TEST (test_pop)
 		{
 			ck_assert_double_eq(pop(),-INFINITY);
-			push(1.1);
 			push(3.3);
-			push(5.5);
 			push(7.7);
+			push(1.1);
+			push(5.5);
 			push(9.9);
 			ck_assert_double_eq(pop(),9.9);
-			ck_assert_double_eq(pop(),7.7);
 			ck_assert_double_eq(pop(),5.5);
-			ck_assert_double_eq(pop(),3.3);
 			ck_assert_double_eq(pop(),1.1);
+			ck_assert_double_eq(pop(),7.7);
+			ck_assert_double_eq(pop(),3.3);
 			ck_assert_double_eq(pop(),-INFINITY);
 		}
 END_TEST
