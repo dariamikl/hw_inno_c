@@ -68,18 +68,14 @@ int insert(double value, int key) {
 
     size++;
 
-    int flag = 0;
     struct Node *check = queue;
-    for (
-            int i = 0;
-            i < size - 1; i++) {
-        if (check->next->key < check->key) {
-            flag = 1;
-            break;
+    for (int i = 0; i < size - 1; i++) {
+        if (check != NULL && check->next != NULL && check->next->key < check->key) {
+            return 2;
         }
         check = check->next;
     }
-    if (size != prev_size + 1 || flag)
+    if (size != prev_size + 1)
         return 2;
     return 0;
 

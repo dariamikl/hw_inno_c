@@ -28,15 +28,15 @@ START_TEST (test_insert)
         }
 
         // test for stability
-        insert(5.1, 5);
-        insert(1.1, 1);
-        insert(2.1, 2);
-        insert(3.1, 3);
-        insert(1.2, 1);
-        insert(4.1, 4);
-        insert(3.2, 3);
-        insert(1.3, 1);
-        insert(1.4, 1);
+        ck_assert_int_eq(insert(5.1, 5), 0);
+        ck_assert_int_eq(insert(1.1, 1), 0);
+        ck_assert_int_eq(insert(2.1, 2), 0);
+        ck_assert_int_eq(insert(3.1, 3), 0);
+        ck_assert_int_eq(insert(1.2, 1), 0);
+        ck_assert_int_eq(insert(4.1, 4), 0);
+        ck_assert_int_eq(insert(3.2, 3), 0);
+        ck_assert_int_eq(insert(1.3, 1), 0);
+        ck_assert_int_eq(insert(1.4, 1), 0);
         ck_assert_double_eq(extract_min(), 1.1);
         ck_assert_double_eq(extract_min(), 1.2);
         ck_assert_double_eq(extract_min(), 1.3);
