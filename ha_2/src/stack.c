@@ -79,7 +79,7 @@ double pick()
 	// if stack is empty returns -infinity and print error message to the screen
 
 	if (count == MIN_SIZE) {
-		printf("%s", "The stack is empty.");
+		printf("%s\n", "The stack is empty.");
 		return -INFINITY;
 	}
 	else
