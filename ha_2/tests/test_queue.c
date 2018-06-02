@@ -17,11 +17,29 @@ START_TEST (test_insert)
             ck_assert_int_eq(insert(i * 0.1, i), 0);
         }
 
-        ck_assert_int_eq(insert(101.0, 1), 1);
+        ck_assert_int_eq(insert(0.1, 1), 1);
 
         for (int i = 1; i <= 100; i++) {
             ck_assert_double_eq(extract_min(), i * 0.1);
         }
+
+        insert(5.5, 5);
+        insert(1.1, 1);
+        insert(2.2, 2);
+        insert(3.3, 3);
+        insert(1.2, 1);
+        insert(4.4, 4);
+        insert(3.1, 3);
+        insert(1.3, 1);
+        insert(1.4, 1);
+
+        ck_assert_double_eq(extract_min(), 7.7);
+        ck_assert_double_eq(extract_min(), 3.3);
+        ck_assert_double_eq(extract_min(), 5.5);
+        ck_assert_double_eq(extract_min(), 9.9);
+        ck_assert_double_eq(extract_min(), 1.1);
+
+
     }
 END_TEST
 

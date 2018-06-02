@@ -21,7 +21,6 @@ int insert(double value, int key) {
 
     // the queue size is 100 elements
     int prev_size = size;
-    printf("%f\n", value);
 
     if (size == 100) {
         return 1;
@@ -48,7 +47,10 @@ int insert(double value, int key) {
         while (((*find_place).next != NULL) && ((*find_place).key <= key)) {
             find_place = find_place->next;
         }
-        if(find_place->next!=NULL){
+        if (find_place->next == NULL && find_place->key < new->key) {
+            find_place->next = new;
+            new->prev = find_place;
+        } else {
             if (find_place != queue) {
                 new->prev = (*find_place).prev;
                 (*(*find_place).prev).next = new;
@@ -60,30 +62,22 @@ int insert(double value, int key) {
                 queue = new;
 
             }
-        } else{
-           // if(find_place!=queue){
-                find_place->next=new;
-                new->prev=find_place;
-//            } else{
-//                queue->prev = new;
-//                new->next = queue;
-//                queue = new;
-//
-//            }
         }
-
-
     }
+
+
     size++;
 
-    int flag=0;
+    int flag = 0;
     struct Node *check = queue;
-    for (int i = 0; i < size-1; i++){
-        if (check->next->key<check->key){
-            flag=1;
+    for (
+            int i = 0;
+            i < size - 1; i++) {
+        if (check->next->key < check->key) {
+            flag = 1;
             break;
         }
-        check=check->next;
+        check = check->next;
     }
     if (size != prev_size + 1 || flag)
         return 2;
