@@ -28,18 +28,17 @@ int push(double value)
 	//  2 - other
 	
 	// the stack size is 50 elements
-
-	if (count == MIN_SIZE) {
+	
+	if (count == MAX_SIZE) {
+		printf("%s\n", "The stack is full.");
+		return 1;
+	}
+	else if (count == MIN_SIZE) {
 		stack = malloc(sizeof(struct Node));
 		stack->prev = NULL;
 		stack->next = NULL;
 		stack->value = value;
 		++count;
-		return 0;
-	}
-	else if (count == MAX_SIZE) {
-		printf("%s\n", "The stack is full.");
-		return 1;
 	}
 	else {
 		struct Node *temp = malloc(sizeof(struct Node));
@@ -50,6 +49,9 @@ int push(double value)
 		stack = temp;
 		++count;
 	}
+	if (stack->value != value || count < 0 || count > 50)
+	return 2;
+	return 0;
 }
  
 double pop()
