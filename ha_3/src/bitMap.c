@@ -50,19 +50,19 @@ void setBitByNumber(int *array, int bit, int position) {
 
 }
 
-int getBitByNumber(int *array, int position) {
-//	// this function returns position's bit from the array
-//    int size = 8* abs(abs((int) &array[0]) - abs((int) &array[1]));
-//    int cell=position/size;
-//    int pos_in_cell=position%size;
-//
-//    int el=array[cell];
-//    int p=2147483648>>pos_in_cell;
-//    el=el&p;
-//
-//    return el;
+int getBitByNumber(int* array, int position)
+{
+	// this function returns position's bit from the array
+    int size = 8* abs(abs((int) &array[0]) - abs((int) &array[1]));
+    int cell=position/size;
+    int pos_in_cell=position%size;
+    unsigned int el=array[cell];
+    unsigned int p = (unsigned int) INT_MIN >> pos_in_cell;
+    el=el&p;
+    el=el>>(size-pos_in_cell-1);
 
-    /* YOUR CODE */
+    return el;
+
 }
 
 void setBitByAddress(void *position, int bit) {
