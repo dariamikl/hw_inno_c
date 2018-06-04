@@ -17,7 +17,30 @@ END_TEST
 
 START_TEST (test_getBitByNumber)
     {
+        int *arr;
+        arr[0] = 0x6ffffff7;
+        arr[1] = 8;
+        arr[2] = 0xffffffff;
+        arr[3] = 0x8FFFFFFF;
+        arr[4] = INT_MAX;   //7FFFFFFF
 
+        ck_assert_int_eq(getBitByNumber(arr, 31), 1);
+        ck_assert_int_eq(getBitByNumber(arr, 30), 1);
+        ck_assert_int_eq(getBitByNumber(arr, 29), 1);
+        ck_assert_int_eq(getBitByNumber(arr, 28), 0);
+
+        ck_assert_int_eq(getBitByNumber(arr, 32), 0);
+        ck_assert_int_eq(getBitByNumber(arr, 33), 0);
+        ck_assert_int_eq(getBitByNumber(arr, 60), 1);
+
+        ck_assert_int_eq(getBitByNumber(arr, 64), 1);
+        ck_assert_int_eq(getBitByNumber(arr, 92), 1);
+
+        ck_assert_int_eq(getBitByNumber(arr, 96), 1);
+        ck_assert_int_eq(getBitByNumber(arr, 124), 1);
+
+        ck_assert_int_eq(getBitByNumber(arr, 128), 0);
+        ck_assert_int_eq(getBitByNumber(arr, 129), 1);
     }
 END_TEST
 
