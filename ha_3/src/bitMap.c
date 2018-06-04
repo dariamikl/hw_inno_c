@@ -71,14 +71,13 @@ void setBitByAddress(void *position, int bit) {
     //
     // this function changes bit by memory address to 'bit'
 
-    char *pos = position;
+    unsigned char *pos = position;
     unsigned char ex = 128;
     pos[0] = pos[0] | ex;
-    printf("%d\n", pos[0]);
 }
 
 int getBitByAddress(void *position) {
     // this function returns first bit by memory address 'position'
 
-    /* YOUR CODE */
+    return ((*(unsigned char*)(position)) & 0b10000000) >> 7;
 }

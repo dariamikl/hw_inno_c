@@ -23,10 +23,10 @@ END_TEST
 
 START_TEST (test_setBitByAddress)
     {
-        char *array = (char *) malloc(sizeof(char) * 10);
+        unsigned char *array = (unsigned char *) malloc(sizeof(unsigned char) * 10);
 
-        array[0] = 63;
-        array[1] = 64;
+        array[0] = 'B';
+        array[1] = 'C';
 
         setBitByAddress(array,1);
     }
