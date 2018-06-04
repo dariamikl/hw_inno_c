@@ -42,8 +42,8 @@ int getBitByNumber(int* array, int position)
     unsigned int p = (unsigned int) INT_MIN >> pos_in_cell;
     el=el&p;
     el=el>>(size-pos_in_cell-1);
-
-    return el;
+    if (el == 0) return 0;
+    return 1;
 
 }
 
