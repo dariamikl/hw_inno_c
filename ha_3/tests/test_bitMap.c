@@ -4,32 +4,38 @@
 #include "bitMap.h"
 
 START_TEST (test_setBitByNumber)
-{
-    //YOUR CODE HERE
-    int* array=(int*)malloc(sizeof(int)*550);
-    array[0]=  INT32_MAX;
-    array[1]=INT32_MAX;
-    //printf("%d\n",array[0]);
-    setBitByNumber(array,1,32);
-}
+    {
+        //YOUR CODE HERE
+        int *array = (int *) malloc(sizeof(int) * 10);
+
+        array[0] = 0;
+        array[1] = 1;
+
+        setBitByNumber(array, 1, 31);
+    }
 END_TEST
 
 START_TEST (test_getBitByNumber)
-{
-    //YOUR CODE HERE
-}
+    {
+        //YOUR CODE HERE
+    }
 END_TEST
 
 START_TEST (test_setBitByAddress)
-{
-    //YOUR CODE HERE
-}
+    {
+        char *array = (char *) malloc(sizeof(char) * 10);
+
+        array[0] = 63;
+        array[1] = 64;
+
+        setBitByAddress(array,1);
+    }
 END_TEST
 
 START_TEST (test_getBitByAddress)
-{
-    //YOUR CODE HERE
-}
+    {
+        //YOUR CODE HERE
+    }
 END_TEST
 
 Suite *str_suite(void) {
