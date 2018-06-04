@@ -96,7 +96,13 @@ double extract_min() {
     } else {
 
         double res = queue->value;
+        // struct Node *tofree = queue;
+
         queue = queue->next;
+
+//        if (queue != NULL) {
+//            free(tofree);
+//        }
         size--;
         return res;
     }
