@@ -19,35 +19,17 @@ void setBitByNumber(int *array, int bit, int position) {
     int pos_in_cell = position % (size);
     int p = (unsigned int) INT_MIN >> pos_in_cell;
 
-    printf("%d\n", pos_in_cell);
-    printf("%d\n", cell);
 
     if (!bit) {
         long k = 1;
         for (int i = 0; i < size - 2; i++) {
             k = (k << 1) + 1;
         }
-        printf("%li\n", k);
-        printf("%c\n", ' ');
-        printf("%li\n", p);
-
         k = k - p;
-
-        printf("%li\n", k);
-        printf("%d\n", array[cell]);
-
         array[cell] = array[cell] & k;
-        printf("%d\n", array[cell]);
-
     } else {
-        printf("p %d\n", p);
         array[cell] = array[cell] | p;
     }
-
-    printf("%c\n", ' ');
-    printf("%d\n", array[0]);
-    printf("%d\n", array[1]);
-
 }
 
 int getBitByNumber(int *array, int position) {
@@ -72,12 +54,18 @@ void setBitByAddress(void *position, int bit) {
     // this function changes bit by memory address to 'bit'
 
     unsigned char *pos = position;
-    unsigned char ex = 128;
-    pos[0] = pos[0] | ex;
+    unsigned char ex1 = 128;
+    unsigned char ex2 = 127;
+
+    if (bit == 1){
+        pos[0] = pos[0] | ex1;
+    }else{
+        pos[0] = pos[0] & ex2;
+    }
 }
 
 int getBitByAddress(void *position) {
     // this function returns first bit by memory address 'position'
 
-    return ((*(unsigned char*)(position)) & 0b10000000) >> 7;
+    return ((*(unsigned char *) (position)) & 0b10000000u) >> 7u;
 }

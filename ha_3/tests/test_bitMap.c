@@ -17,24 +17,40 @@ END_TEST
 
 START_TEST (test_getBitByNumber)
     {
-        //YOUR CODE HERE
+
     }
 END_TEST
 
 START_TEST (test_setBitByAddress)
     {
-        unsigned char *array = (unsigned char *) malloc(sizeof(unsigned char) * 10);
+        unsigned char *array = (unsigned char *) malloc(sizeof(unsigned char) * 5);
 
-        array[0] = 'B';
-        array[1] = 'C';
+        array[0] = 64;
+        array[1] = 192;
 
-        setBitByAddress(array,1);
+        setBitByAddress(array, 1);
+        setBitByAddress(array + 1, 0);
+
+        ck_assert_int_eq(array[0], 192);
+        ck_assert_int_eq(array[1], 64);
     }
 END_TEST
 
 START_TEST (test_getBitByAddress)
     {
-        //YOUR CODE HERE
+        unsigned char *array = (unsigned char *) malloc(sizeof(unsigned char) * 5);
+        array[0] = 255;
+        array[1] = 128;
+
+        ck_assert_int_eq(getBitByAddress(array), 1);
+        setBitByAddress(array + 1, 0);
+        ck_assert_int_eq (getBitByAddress(array + 1), 0);
+
+        int *array1 = (int *) malloc(sizeof(int) * 5);
+        array1[0] = 512;
+
+        ck_assert_int_eq(getBitByAddress(array1), 0);
+
     }
 END_TEST
 
