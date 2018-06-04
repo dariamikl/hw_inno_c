@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../tests/../src/bitMap.h
+
+/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-3/src/bitMap.c
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+bitMap.h
+/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-3/src/bitMap.h
+
+/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-3/src/bitMap.h
+
+/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-3/tests/test_bitMap.c
+check.h
+-
+stdlib.h
+-
+stdio.h
+-
+bitMap.h
+/home/alien/Загрузки/inno_ansic_spring-dev/assignments/ha-3/tests/bitMap.h
+
