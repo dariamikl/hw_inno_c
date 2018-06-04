@@ -10,8 +10,13 @@ START_TEST (test_setBitByNumber)
 
         array[0] = 0;
         array[1] = 1;
-
         setBitByNumber(array, 1, 31);
+        setBitByNumber(array, 1, 32);
+        setBitByNumber(array, 1, 33);
+        ck_assert_int_eq(array[0], 0x00000001);
+        ck_assert_int_eq(array[1], -1073741823);
+        setBitByNumber(array, 1, 35);
+        ck_assert_int_eq(array[1], -805306367);
     }
 END_TEST
 
