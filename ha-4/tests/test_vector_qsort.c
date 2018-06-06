@@ -19,12 +19,13 @@ START_TEST(test_vector_qsort)
 	struct Vector *v = vector_create_int(0);
 	for (int i = 0; i < 100; ++i) {
 		vector_push_back_int(v, 100 - i);
+		vector_push_back_int(v, -100 + i);
 	}
-	qsort(vector_get_begin(v), vector_get_size(v)-1, vector_get_item_size(v), comp_vectors_int);
-	for (int i = 0; i < 10; ++i) {
+	qsort(vector_get_begin(v), vector_get_size(v), vector_get_item_size(v), comp_vectors_int);
+	for (int i = 0; i < vector_get_size(v)-1; ++i) {
 		int element1 = *(int*)vector_get_element(v, (size_t)i);
 		int element2 = *(int*)vector_get_element(v, (size_t)(i+1));
-		assert(element1 <= element2);
+		ck_assert_int_le(element1, element2);
 	}
 }
 END_TEST
